@@ -1,0 +1,430 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: 18px;
+}
+/* start of header */
+header {
+  display: flex;
+  justify-content: space-between;
+  background-color: black;
+}
+
+header nav {
+  display: flex;
+}
+
+@media screen and (max-width: 600px) {
+  header a:not(:first-of-type),
+  .dropdown,
+  header > a {
+    display: none;
+  }
+}
+
+header nav a:first-of-type {
+  background-color: teal;
+}
+
+header nav a:first-of-type:hover {
+  background-color: rgb(194, 194, 194);
+  color: black;
+}
+nav a i {
+  padding-right: 15px;
+}
+
+header nav a {
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+}
+
+header nav a:hover {
+  background-color: white;
+  color: black;
+}
+
+nav .dropdown {
+  padding: 10px 20px;
+  cursor: pointer;
+  position: relative;
+}
+
+nav .dropdown:hover {
+  background-color: rgb(175, 174, 174);
+}
+
+nav .dropdown:hover ul {
+  display: block;
+}
+nav .dropdown:hover button {
+  color: black;
+}
+
+nav .dropdown button {
+  border: none;
+  outline: none;
+  background-color: inherit;
+  cursor: pointer;
+  color: white;
+}
+
+nav .dropdown button i {
+  padding-left: 10px;
+}
+nav .dropdown ul {
+  position: absolute;
+  top: 38px;
+  left: 0;
+  background-color: white;
+  width: 130%;
+  display: none;
+  z-index: 1;
+}
+nav .dropdown ul li {
+  color: black;
+  list-style: none;
+  padding: 8px 16px;
+  text-align: left;
+}
+
+nav .dropdown ul li:hover {
+  background-color: rgb(190, 190, 190);
+  color: black;
+}
+
+header a {
+  color: white;
+  padding: 10px 15px;
+  font-size: 15px;
+  text-align: center;
+}
+header a:hover {
+  background-color: teal;
+  cursor: pointer;
+}
+
+/* end of header */
+
+/* start of home */
+
+main .home {
+  background-image: url(../images/bg.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 90vh;
+  position: relative;
+}
+
+.home button {
+  position: absolute;
+  bottom: 10px;
+  left: 15px;
+  padding: 15px;
+  text-transform: uppercase;
+  font-size: 20px;
+  border: none;
+  outline: none;
+  color: white;
+  background-color: black;
+  cursor: pointer;
+}
+
+.home button:hover {
+  background-color: teal;
+}
+
+/* end of home */
+
+/* start of team */
+
+.team {
+  padding: 25px;
+  text-align: center;
+}
+
+.team h2 {
+  text-transform: uppercase;
+  font-size: 25px;
+  font-weight: 100;
+  padding: 15px;
+}
+
+.team p {
+  padding: 15px;
+}
+
+.team .profile {
+  display: flex;
+  justify-content: space-around;
+  padding: 15px;
+}
+
+@media screen and (max-width: 600px) {
+  .team .profile {
+    flex-direction: column;
+  }
+  .team .profile div {
+    padding-bottom: 5px;
+  }
+  .profile img {
+    width: 60%;
+  }
+}
+.profile img {
+  border-radius: 50%;
+}
+
+.profile h3 {
+  padding: 15px;
+  font-weight: 100;
+}
+
+.profile span {
+  font-size: 16px;
+}
+/* end of team */
+
+/* start of work */
+
+.work {
+  padding: 50px 25px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  background-color: rgb(66, 66, 66);
+  grid-gap: 15px;
+}
+@media screen and (max-width: 600px) {
+  .work {
+    grid-template-columns: auto;
+  }
+}
+
+.work article h2 {
+  font-size: 25px;
+  font-weight: 100;
+  color: white;
+  padding: 8px 0;
+}
+
+.work article p {
+  font-size: 16px;
+  font-weight: 100;
+  line-height: 1.5;
+  color: white;
+}
+
+.work div {
+  background-color: white;
+}
+
+.work div img {
+  width: 100%;
+}
+
+.work div h3 {
+  font-size: 20px;
+  font-weight: 100;
+  padding: 15px;
+}
+
+.work div span {
+  display: block;
+  padding: 7px 15px;
+}
+
+/* end of work */
+
+/* start of pricing */
+
+.pricing {
+  padding: 50px 25px;
+  text-align: center;
+}
+
+.pricing h2 {
+  font-size: 25px;
+  font-weight: 100;
+  padding-bottom: 25px;
+  text-transform: uppercase;
+}
+
+.pricing p {
+  padding-bottom: 25px;
+}
+
+.pricing .plans {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 15px;
+}
+
+@media screen and (max-width: 600px) {
+  .pricing .plans {
+    grid-template-columns: auto;
+  }
+}
+
+.pricing .plans ul {
+  list-style: none;
+  border: 1px solid rgb(189, 189, 189);
+}
+
+.pricing .plans ul:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
+}
+
+.plans ul li {
+  border-bottom: 1px solid rgb(189, 189, 189);
+  padding: 20px;
+}
+
+.plans ul .gray {
+  background-color: gray !important;
+}
+
+.plans ul li:first-of-type {
+  padding: 30px;
+  font-size: 30px;
+  font-weight: 300;
+  color: white;
+  background-color: black;
+}
+
+.plans ul li h4 {
+  font-size: 30px;
+  font-weight: 100;
+  padding-bottom: 15px;
+}
+.plans ul li h4 strong {
+  font-weight: 600;
+  padding-right: 5px;
+}
+
+.plans ul li span {
+  color: rgb(182, 182, 182);
+}
+
+.plans ul li:last-of-type {
+  background-color: rgb(238, 238, 238);
+}
+
+.plans ul li button {
+  padding: 15px 20px;
+  border: none;
+  outline: none;
+  color: white;
+  background-color: teal;
+}
+
+.plans ul li button:hover {
+  background-color: rgb(177, 177, 177);
+  color: black;
+  cursor: pointer;
+}
+
+.plans ul li button i {
+  font-size: 12px;
+}
+
+/* end of pricing */
+
+/* start of contact */
+
+.contact {
+  background-color: rgba(212, 212, 212, 0.4);
+}
+
+.contact .cont-container {
+  padding: 40px 15px;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+}
+
+@media screen and (max-width: 600px) {
+  .contact .cont-container {
+    grid-template-columns: auto;
+  }
+}
+
+.contact article h2 {
+  font-size: 20px;
+  font-weight: 500;
+  border-bottom: 5px solid teal;
+  display: inline-block;
+  margin-bottom: 20px;
+}
+
+.contact article h3 {
+  font-weight: 200;
+  padding-bottom: 20px;
+}
+
+.contact article p {
+  padding-bottom: 20px;
+}
+
+.contact article div {
+  padding-bottom: 15px;
+  font-size: 16px;
+}
+
+.contact article div i {
+  padding-right: 7px;
+  font-size: 18px;
+  color: teal;
+}
+
+.contact form {
+  background-color: white;
+  padding: 15px;
+  position: relative;
+}
+
+.contact input:first-of-type,
+.contact input:nth-of-type(2),
+.contact input:nth-of-type(3) {
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid black;
+  padding: 10px;
+}
+
+.contact form label {
+  margin: 10px;
+  display: inline-block;
+}
+
+.contact form .submit {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  padding: 10px;
+  border: none;
+  outline: none;
+  background-color: black;
+  color: white;
+  cursor: pointer;
+}
+
+.contact form .submit:hover {
+  background-color: rgb(190, 190, 190);
+  color: black;
+}
+
+.contact img {
+  max-width: 100%;
+  height: auto;
+}
+/* end of contact */
+footer {
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding: 50px 0;
+  font-size: 25px;
+}
